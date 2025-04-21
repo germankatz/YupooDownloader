@@ -1,5 +1,9 @@
+<h1 style="text-align:center;">YupooDownloader</h1>
 
-# YupooDownloader
+<p style="text-align:center;">This script downloads all albums from a Yupoo gallery into a dump folder, creating a subfolder for each album named after its title.</p>
+
+---
+
 ## Setup
 
 Ensure you have python 3.6+ installed.
@@ -8,13 +12,22 @@ Ensure you have python 3.6+ installed.
 pip install -r requirements.txt
 
 ```
-## The script will download all the albums in the current page, you can add multiple pages as an array in the JSON file: .
 
-details.json
+### Configure details.json
 
-## Running the script
+In the array yupoos you can place an object with a structure like this:
 
 ```
-python3 YupooPhotoDownloader.py
+{
+    "productCount": "n",
+    "yupoo_link": "https://namename.x.yupoo.com/categories/3484623"
+}
+```
 
+It will download the first `n` albums in the same order as the yupoo category.
+
+### Run the script
+
+```
+py YupooPhotoDownloader.py
 ```
