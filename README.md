@@ -26,6 +26,19 @@ In the array yupoos you can place an object with a structure like this:
 
 It will download the first `n` albums in the same order as the yupoo category.
 
+### Configure the script
+
+You can adjust these variables at the top of the script to maximize the performance:
+
+```
+# Configuración de reintentos para imágenes
+MAX_RETRIES_FOR_IMAGES = 3  # Variable para controlar cuántas veces reintentar la descarga
+RETRY_DELAY_MS = 1000  # Tiempo de espera entre reintentos (en milisegundos)
+
+# Número de trabajadores para descargas paralelas
+MAX_WORKERS = 36  # Ajusta según tu conexión y CPU
+```
+
 ### Run the script
 
 ```
